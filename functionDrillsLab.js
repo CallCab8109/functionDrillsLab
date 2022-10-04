@@ -277,10 +277,19 @@ let loser = 'Glimmer'
   The function should loop over the array of contestant names. If the loser string appears in the array, splice it out. Return the new contestants array.
 */
 
-function theEliminator () {
-  
+function theEliminator (contestants, loser) {
+  for(let i = 0; i < contestants.length; i++) {
+    if (contestants[i] === loser) {
+      contestants.splice(i, 1)
+    }
+  }
+return contestants
 }
 
+let newContestants = theEliminator(contestants,loser)
+console.log(newContestants)
+
+//had to look at solutions for help- will review over the weekend
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo."
 /*
@@ -288,8 +297,10 @@ let sampleString = "Hi, my name is Kylo."
   Invoke the function, passing in the sampleString (above).
 */
 
-//CODE HERE
-
+function string(sampleString){
+  console.log(sampleString.toUpperCase())
+}
+string(sampleString)
 
 ////////////////// PROBLEM 18 ////////////////////
 /*
@@ -301,6 +312,16 @@ let sampleString = "Hi, my name is Kylo."
   If it does, return 'email verified' and if doesn't, 
   return 'must provide a valid email address'
 */
+let email = ('carter.bleyl@gmail.com')
+let at = "@"
+function emailCheck (email) {
+  emailCheck.trim()
+} if(email.includes(at)){
+  console.log('email verified')
+} else {
+  console.log('must provide a valid email address')
+}
+
 
 ////////////////// PROBLEM 19 ////////////////////
 /*
